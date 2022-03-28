@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="enter_btn">
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <h2>現在の気分を教えてください</h2>
+        <div>
+            <label><input type="radio" name="now" value="喜び" id="now_ch1">喜び</label>
+            <label><input type="radio" name="now" value="悲しみ" id="now_ch2">悲しみ</label>
+            <label><input type="radio" name="now" value="怒り" id="now_ch3">怒り</label>
+            <label><input type="radio" name="now" value="驚き" id="now_ch4">驚き</label>
+            <label><input type="radio" name="now" value="恐れ" id="now_ch5">恐れ</label>
+            <label><input type="radio" name="now" value="嫌悪" id="now_ch6">嫌悪</label>
+        </div>
+        <h2>読みたいジャンルを教えてください</h2>
+        <div>
+            <label><input type="radio" name="genre" value="ミステリー" id="janre_ch1">ミステリー</label>
+            <label><input type="radio" name="genre" value="恋愛" id="janre_ch2">恋愛</label>
+            <label><input type="radio" name="genre" value="ホラー" id="janre_ch3">ホラー</label>
+            <label><input type="radio" name="genre" value="歴史" id="janre_ch4">歴史小説</label>
+            <label><input type="radio" name="genre" value="短編小説" id="janre_ch5">短編</label>
+            <label><input type="radio" name="genre" value="ファンタジー" id="janre_ch6">ファンタジー</label>
+        </div>
+        <h2>不要な要素を教えてください</h2>
+        <div>
+            <label><input type="radio" name="excepting" value="怖い" id="except_ch1">怖い</label>
+            <label><input type="radio" name="excepting" value="恋愛" id="except_ch2">恋愛</label>
+            <label><input type="radio" name="excepting" value="ホラー" id="except_ch3">ホラー</label>
+            <label><input type="radio" name="excepting" value="歴史" id="except_ch4">歴史</label>
+            <label><input type="radio" name="excepting" value="長い" id="except_ch5">長い</label>
+            <label><input type="radio" name="excepting" value="ファンタジー" id="except_ch6">ファンタジー</label>
+        </div>
+        <input type="submit" value="送信">
+    </form>
+</div>
+
+{% endblock %}
