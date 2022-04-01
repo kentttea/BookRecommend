@@ -8,6 +8,6 @@ for review in df_review['Reviews']:
     review = ast.literal_eval(review)
     reviews.append(review)
 
-model = Word2Vec(reviews, sg=1, vector_size=150, min_count=1, window=10, epochs=20)
+model = Word2Vec(reviews, sg=0, vector_size=100, min_count=1, window=10, epochs=10)
 model.save('book_recommend.model')
 

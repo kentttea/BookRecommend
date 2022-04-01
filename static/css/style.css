@@ -1,0 +1,532 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/* 要素 フォントサイズ・マージン・パディングをリセット */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* 新規追加要素をブロック要素化 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* ulのマーカー非表示 */
+ol, ul {
+  list-style: none;
+}
+
+/* 引用符の非表示 */
+blockquote, q {
+  quotes: none;
+}
+
+/* blockquote要素、q要素の前後にコンテンツ非表示 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* フォントサイズ　リセット フォントの縦方向 ベースライン揃え 点線削除 */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  outline: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  /* opacity: 0.75; */
+  /* filter: alpha(opacity=75); */
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a,
+a * {
+  text-align: center;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /* 追加 */
+}
+
+/* ins要素 デフォルトセット 色を変える場合はここで変更 */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* mark要素 デフォルトセット 色やフォントスタイルを変える場合はここで変更 */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* テキスト 打ち消し線 */
+del {
+  text-decoration: line-through;
+}
+
+/* IE　デフォルトで点線を下線表示設定　下線設定 マウスオーバー時 ヘルプカーソル表示可 */
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/*　隣接するセルのボーダーを重ねて表示　*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 水平罫線デフォルトリセット */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* 縦方向の揃え 中央揃え */
+input,
+select {
+  vertical-align: middle;
+  
+}
+
+/* 画像を縦に並べた時に余白0 */
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+  /* width: 100%; */
+  max-width: 100%;
+  height: auto;
+}
+
+/*box-sizingを全ブラウザに対応*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+br {
+  line-height: inherit;
+}
+
+/*--------------------------------------------------------------
+    # メインコンテンツ
+--------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+  line-height: 1.2;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 2.4vw;
+    line-height: 1.7;
+  }
+}
+
+body {
+  width: 100%;
+  font-weight: 500;
+  font-family: 'Corben', cursive;
+  --global--color-primary: #63312D;
+  color: #63312D;
+}
+
+#wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+#wrapper main {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  #wrapper main {
+    padding-top: 0;
+  }
+}
+
+progress {
+  width: 100%;
+  background: #fff;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  background: #fff;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+}
+
+footer {
+  position: relative;
+}
+
+progress {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+.container {
+  position: relative;
+  width: 500%;
+  max-width: unset;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+section {
+  position: relative;
+}
+
+section.qa_block {
+  width: 100%;
+  height: 100vh;
+}
+
+section.qa_block .mv_area {
+  width: 100%;
+  background: #DDD0CA;
+  padding: 5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .mv_area {
+    padding-bottom: 3rem;
+  }
+}
+
+section.qa_block .mv_area .pg_sv {
+  width: 100%;
+  padding: 5rem 0 0;
+  /* background: url(../images/title_line.png) center center no-repeat; */
+  background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .mv_area .pg_sv {
+    padding: 4rem 0 0;
+  }
+}
+
+section.qa_block .mv_area span {
+  display: block;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .mv_area span {
+    margin-top: 1rem;
+  }
+}
+
+section.qa_block .mv_area span:first-of-type {
+  font-family: "ta-pop-tomo";
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .mv_area span:first-of-type {
+    line-height: 1;
+  }
+}
+
+section.qa_block .mv_area span:last-of-type {
+  font-family: "ta-pop-tomo";
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .mv_area span:last-of-type {
+    line-height: 1;
+  }
+}
+
+section.qa_block .qa_grid {
+  max-width: 90rem;
+  width: 100%;
+  height: calc( 100% - 28.5rem);
+  padding: 7rem 0 0;
+  margin: auto;
+  overflow: scroll;
+}
+
+section.qa_block .qa_grid::-webkit-scrollbar {
+  width: 0;
+}
+
+section.qa_block .qa_grid::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b4b4b4;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid {
+    height: calc( 100% - 22rem);
+    padding: 6rem 0 0;
+  }
+}
+
+section.qa_block .qa_grid .q_block {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid .q_block {
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+}
+
+section.qa_block .qa_grid .q_block h2 {
+  font-family: "ta-pop-tomo";
+  font-weight: 700;
+  font-size: 4.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid .q_block h2 {
+    font-size: 2.5rem;
+  }
+}
+
+section.qa_block .qa_grid .a_grid {
+  margin: 1rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+section.qa_block .qa_grid .pg_thumb {
+  margin-top: 3rem;
+  min-width: 50rem;
+  height: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid .pg_thumb {
+    min-width: 100%;
+    height: 3rem;
+  }
+}
+
+section.qa_block .qa_grid input{
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  color: #D3665D;}
+
+section.qa_block .qa_grid label {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "ta-pop-tomo";
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid label {
+    font-size: 1.8rem;
+  }
+}
+
+section.qa_block .qa_grid label.answer_circle {
+  margin: 0 5rem;
+  width: 18rem;
+  height: 18rem;
+  background: url(../images/yn_btn.png) center center no-repeat;
+  background-size: contain;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+section.qa_block .qa_grid label.answer_rect {
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 9rem;
+  border-bottom: solid #63312D 2px;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid label.answer_rect {
+    padding: 0 1rem;
+    height: 6rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+/*ボタンのCSS*/
+.go_btn_wrapper {
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+    padding:10px;
+}
+a.go_forward_btn{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background:#C2DBCB;
+	color: #535252;
+  font-size: 5rem;
+}
+
+a.go_back_btn{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background:#C2DBCB;
+	color: #535252;
+  font-size: 5rem;
+}
+
+a.go_forward_btn:not(:hover):not(:active):not(.has-background){
+	background:#C2DBCB;
+	color: #535252;
+}
+a.go_forward_btn:hover{
+	background:#C2DBCB;
+	color: #535252;
+}
+a.go_back_btn:not(:hover):not(:active):not(.has-background){
+	background:#C2DBCB;
+	color: #535252;
+}
+
+a.go_forward_btn:disabled:not(:hover):not(:active)  {
+  background: #E2E2E2;
+	color:#ffffff;
+	border-width:0;
+}
+
+a.go_forward_btn:disabled:hover  {
+  background: #E2E2E2;
+	color:#ffffff;
+	border-width:0;
+}
+
+.logo_book_consult{
+	width:calc(100% -10rem);
+	margin:1rem 5rem;
+}
+
+@media screen and (max-width:767px){
+	.go_btn_wrapper{
+		background-color: #DDD0CA;
+	}
+	a.go_forward_btn{
+		background:#ffffff;
+	}
+
+	a.go_back_btn{
+		background:#ffffff;
+	}
+	a.go_forward_btn:not(:hover):not(:active):not(.has-background){
+		background:#ffffff;
+	}
+	a.go_forward_btn:hover{
+		background:#ffffff;
+	}
+	a.go_back_btn:not(:hover):not(:active):not(.has-background){
+		background:#ffffff;
+	}
+	a.go_forward_btn:disabled:not(:hover):not(:active)  {
+	  background: #E2E2E2;
+		color:#ffffff;
+		border-width:0;
+	}
+
+	a.go_forward_btn:disabled:hover  {
+	  background: #E2E2E2;
+		color:#ffffff;
+		border-width:0;
+	}
+	
+}

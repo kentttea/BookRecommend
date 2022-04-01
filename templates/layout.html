@@ -8,8 +8,12 @@
     <title>book recommend</title>
 </head>
 <body>
-{% block content %}{% endblock %}
-<p>{{ message }}</p>
+
+<div class="go_forward_btn"> 
+    <form action="/question" method="POST" enctype="multipart/form-data">
+    <input type="submit" value="AIにおすすめの本を選んでもらう">
+    </form>
 </div>
+
 </body>
 </html>

@@ -1,7 +1,3 @@
-from crypt import methods
-from email import message
-import os
-import sys 
 from flask import (
      Flask, 
      request, 
@@ -11,24 +7,44 @@ from test import recommend
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
-def get():
-	return render_template('index.html')
+def layout():
+	return render_template('layout.html')
 
 
-# @app.route("/", methods=['POST'])
-# def post():
-#     book = request.form.get('now')
-#     return render_template('index.html', message = '{}の本がおすすめです！'.format(book))
+# @app.route('/question', methods=['POST'])
+# def book_recommend():
+#     genre = request.form.get('genre')
+#     now = request.form.get('now')
+#     after = request.form.get('after')
+#     want = request.form.get('want')
+#     excepting = request.form.get('excepting')
+#     book = recommend(genre=genre, now=now, after=after, want=want, excepting=excepting)
+#     return book
 
-@app.route("/", methods=['POST'])
-def book_recommend():
-    now = request.form.get('now')
-    genre = request.form.get('genre')
-    excepting = request.form.get('excepting')
-    book = recommend(now=now, genre=genre, excepting=excepting)
-    return render_template('index.html', message = '{}の本がおすすめです！'.format(book))
+
+
+@app.route('/question', methods=['POST'])
+def question():
+    return render_template('question.html')
+
+@app.route("/result", methods=["GET", "POST"])
+def result():
+    if request.method == "POST":
+        genre = request.form.get('genre')
+        now = request.form.get('now')
+        after = request.form.get('after')
+        want = request.form.get('want')
+        excepting = request.form.get('excepting')
+        book = recommend(genre=genre, now=now, after=after,
+                         want=want, excepting=excepting)
+        if len(book) > 1:
+            return render_template('result.html', message='"{}"か"{}"の本がおすすめです！'.format(book[0], book[1]))
+        else:
+            return render_template('result.html', message='{}の本がおすすめです！'.format(book))
+
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port="8888")
 
 
