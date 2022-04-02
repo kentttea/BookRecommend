@@ -33,18 +33,20 @@ def recommend(genre="", now="", after="", want="", excepting=""):
             recommend_book = l_titles[book_index]
             l_recommend_book.append(recommend_book)
     if len(l_recommend_book) > 3:
-        book = random.sample(l_recommend_book, 3)
-        return book
-        # print(book)
+        book = random.sample(l_recommend_book, 2)
+        # return book
+        print(book[1],book[0])
+    elif len(l_recommend_book) == 1:
+        # return l_recommend_book[0]
+        print(l_recommend_book[0])  
     else:
-        return l_recommend_book
-        # print(l_recommend_book)        
+        print('条件に合う本がありませんでした。')      
 
 
-# now = '恐怖'
-# genre = 'ホラー'
-# after = '驚愕'
-# want = '驚き'
-# excepting = '恋愛'
-# recommend(genre,now, after, want, excepting)
+now = '喜び'
+genre = '恋愛'
+after = '驚愕'
+want = '涙'
+excepting = '退屈'
+recommend(genre,now, after, want, excepting)
 
