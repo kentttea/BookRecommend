@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
-    <title>book recommend</title>
+    <title>Easy 2 Read</title>
 </head>
 <body>
     <section class="result_page">
@@ -18,13 +18,14 @@
         </div>
         
 
-        <div class="main_container result_content">
+        <!-- <div class="main_container result_content">
             <div class="row">
                 <div class="result_block text-center">
                     <h3 class="result_text">あなたの興味関心</h3>
                     <p>5つの質問に答えてもらった結果です。</p>
+                    <p class="result_text">{{ result }}</p>
                 </div>
-            </div>
+            </div> -->
       
         
     
@@ -34,10 +35,12 @@
                     <p class="result_text">質問の答えと相関性が高い本を紹介しています。</p>
                 </div>
                 <div class="result_block text-center">
-                    <p class"result_text>{{ recommend }}</p>
-                    <p class"result_text>{{ recommend2 }}</p>
+                    <h3 class"result_text>{{ recommend }}</p>
+                    <h3 class"result_text>{{ recommend2 }}</p>
                 </div>
             </div>
+
+
         </div>
       
     </section> 

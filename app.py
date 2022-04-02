@@ -37,10 +37,12 @@ def result():
         excepting = request.form.get('excepting')
         book = recommend(genre=genre, now=now, after=after, want=want, excepting=excepting)
         if len(book) > 1:
-            return render_template('result.html', result='{}{}{}{}{}'.format(genre, now, after, want, excepting), recommend='1冊目のおすすめの本は{}です！'.format(book[0]), recommned2='2冊目のおすすめの本は{}です！'.format(book[1]))
+            return render_template('result.html', recommend='あなたにおすすめの本は「{}」です！'.format(book[0]), recommned2='他のおすすめの本は「{}」です！'.format(book[1]))
+            # result='読みたいジャンルは"{}",今の気分は"{}",読書後の気分は"{}",欲しい要素は"{}",いらない要素は"{}"です。'.format(genre, now, after, want, excepting), 
+        elif len(book) == 1:
+            return render_template('result.html', recommend='あなたにおすすめの本は「{}」です！'.format(book[0]))
         else:
-            return render_template('result.html', recommend='{}がおすすめです！'.format(book))
-
+             print('条件に合う本がありませんでした。今後改善していくので少々お待ちください。')    
 
 
 if __name__ == "__main__":
