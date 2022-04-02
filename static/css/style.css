@@ -361,6 +361,11 @@ footer {
   box-shadow: 2px 2px 2px grey;
   padding: 0.5rem;
   white-space: nowrap;
+  font-family: 'HanziPen SC';
+  font-weight: 600;
+  font-size: 150%;
+  text-align: center;
+  color: #63312D;
 }
 
 /*--------------------------------------------------------------
