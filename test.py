@@ -46,7 +46,7 @@ def recommend(genre="", now="", after="", want="", excepting=""):
 # now = '喜び'
 # genre = '恋愛'
 # after = '驚愕'
-# want = '涙'
+# want = '感動'
 # excepting = '退屈'
 # recommend(genre,now, after, want, excepting)
 
