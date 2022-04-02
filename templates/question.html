@@ -5,12 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="setup.js"></script>
+    <!-- <script src="setup.js"></script> -->
     <link rel="stylesheet" href="../static/css/style.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet"href="https://unpkg.com/swiper/css/swiper.min.css">
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script rel="stylesheet"> -->
     <title>book recommend</title>
 </head>
 
@@ -18,272 +15,273 @@
     <article id="wrapper">
         <main>
             <div class="container">
+                <form action="/result", method="POST" class="container">
                 <!-- style="transform: translate3d(0px, 0px, 0px);" -->
                 <!-- <progress max="4", value="0", aria-valuenow="1", aria-valuemin="1", aria-valuemax="4"></progress> -->
-                <section class="qa_block" id="page0">
-                    <a id="id_page0">
-                        <div class="mv_area">
-                        <p class="pg_sv"></p>
-                        <span>QUESTION</span>
-                        <span>01</span>
-                        </div>
-                    </a>
-                
-                    <div class="qa_grid">
-                        <div class="q_block">
-                            <h2>読みたいジャンルを教えてください</h2>
-                        </div>
-                        <form action="/result", method="POST">
-                            <div class="a_grid type">
-                                <div>
-                                <input type="radio" name="genre" value="推理" id="answer_1_6">
-                                <label for="answer_1_6" class="answer_rect">ミステリー小説</label>
-                                </div>  
-                                <div>
-                                <input type="radio" name="genre" value="ホラー" id="answer_1_5">
-                                <label for="answer_1_5" class="answer_rect">ホラー小説</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="genre" value="恋愛" id="answer_1_4">
-                                <label for="answer_1_4" class="answer_rect">恋愛小説</label>
-                                </div>
-                            </div>
-                            <div class="a_grid type">
-                                <div>
-                                <input type="radio" name="genre" value="空想" id="answer_1_3">
-                                <label for="answer_1_3" class="answer_rect">ファンタジー小説</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="genre" value="SF" id="answer_1_2">
-                                <label for="answer_1_2" class="answer_rect">SF小説</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="genre" value="歴史" id="answer_1_1">
-                                <label for="answer_1_1" class="answer_rect">時代小説</label>
-                                </div>
-                            </div>
-                        <!-- </form> -->
-
-                        <div class="pg_thumb"></div>
-                        <div class="go_btn_wrapper">
-                        <div style="width:0px; height:100px; border-width:0;"></div>                        
-                        <div><a href="#id_page1" class="go_forward_btn">次へ</a></div>
-                        </div>
-
-                    </div>
-                </section>
-                
-                <section class="qa_block" id="page1 ">
-                    <a id="id_page1">
-                        <div class="mv_area">
+                    <section class="qa_block" id="page0">
+                        <a id="id_page0">
+                            <div class="mv_area">
                             <p class="pg_sv"></p>
                             <span>QUESTION</span>
-                            <span>02</span>
-                        </div>
-                    </a>
-                
-                    <div class="qa_grid">
-                        <div class="q_block">
-                            <h2>今の気分を教えてください</h2>
-                        </div>
-                        <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
-                            <div class="a_grid type">
-                                <div>
-                                    <input type="radio" name="now" value="喜び" id="answer_2_6">
-                                    <label for="answer_2_6" class="answer_rect">喜び</label>
+                            <span>01</span>
+                            </div>
+                        </a>
+                    
+                        <div class="qa_grid">
+                            <div class="q_block">
+                                <h2>読みたい本のジャンルは！</h2>
+                            </div>
+                            <!-- <form action="/result", method="POST"> -->
+                                <div class="a_grid type">
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="genre" value="推理" id="answer_1_6">
+                                    <label for="answer_1_6" class="answer_rect_long">ミステリー小説</label>
                                     </div>  
-                                    <div>
-                                    <input type="radio" name="now" value="悲しみ" id="answer_2_5">
-                                    <label for="answer_2_5" class="answer_rect">悲しみ</label>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="genre" value="ホラー" id="answer_1_5">
+                                    <label for="answer_1_5" class="answer_rect_long">ホラー小説</label>
                                     </div>
-                                    <div>
-                                    <input type="radio" name="now" value="怒り" id="answer_2_4">
-                                    <label for="answer_2_4" class="answer_rect">怒り</label>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="genre" value="恋愛" id="answer_1_4">
+                                    <label for="answer_1_4" class="answer_rect_long">　恋愛小説　</label>
                                     </div>
                                 </div>
                                 <div class="a_grid type">
-                                    <div>
-                                    <input type="radio" name="now" value="驚き" id="answer_2_3">
-                                    <label for="answer_2_3" class="answer_rect">驚き</label>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="genre" value="空想" id="answer_1_3">
+                                    <label for="answer_1_3" class="answer_rect_long">ファンタジー</br>小説</label>
                                     </div>
-                                    <div>
-                                    <input type="radio" name="now" value="恐れ" id="answer_2_2">
-                                    <label for="answer_2_2" class="answer_rect">恐れ</label>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="genre" value="SF" id="answer_1_2">
+                                    <label for="answer_1_2" class="answer_rect_long">　SF小説　</label>
                                     </div>
-                                    <div>
-                                    <input type="radio" name="now" value="嫌悪" id="answer_2_1">
-                                    <label for="answer_2_1" class="answer_rect">嫌悪</label>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="genre" value="歴史" id="answer_1_1">
+                                    <label for="answer_1_1" class="answer_rect_long">　時代小説　</label>
+                                    </div>
                                 </div>
-                            </div>
-                        <!-- </form> -->
-                        <div class="pg_thumb"></div>
-                        <div class="go_btn_wrapper">
-                            <div><a href="#id_page0" class="go_back_btn">戻る</a></div>
-                            <div><a href="#id_page2" class="go_forward_btn">次へ</a></div>
-                        </div>
-            
-                    </div>
-                </section>
-                
-                <section class="qa_block" id="page2">
-                    <a id="id_page2">
-                        <div class="mv_area">
-                            <p class="pg_sv"></p>
-                            <span>QUESTION</span>
-                            <span>03</span>
-                        </div>
-                    </a>    
-                        
-                <div class="qa_grid">
-                    <div class="q_block">
-                        <h2>読後になりたい気分を教えてください</h2>
-                    </div>
-                    <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
-                        <div class="a_grid type">
-                            <div>
-                            <input type="radio" name="after" value="喜び" id="after_ch6">
-                            <label for="after_ch6" class="answer_rect">喜び</label>
-                            </div>  
-                            <div>
-                            <input type="radio" name="after" value="悲しみ" id="after_ch5">
-                            <label for="after_ch5" class="answer_rect">悲しみ</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="after" value="怒り" id="after_ch4">
-                            <label for="after_ch4" class="answer_rect">怒り</label>
-                            </div>
-                        </div>
-                        <div class="a_grid type">
-                            <div>
-                            <input type="radio" name="after" value="驚き" id="after_ch3">
-                            <label for="after_ch3" class="answer_rect">驚き</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="after" value="恐れ" id="after_ch2">
-                            <label for="after_ch2" class="answer_rect">恐れ</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="after" value="嫌悪" id="after_ch1">
-                            <label for="after_ch1" class="answer_rect">嫌悪</label>
-                            </div>
-                        </div>
-                    <!-- </form> -->
-                        <div class="pg_thumb"></div>
-                        <div class="go_btn_wrapper">
-                            <div><a href="#id_page1" class="go_back_btn">戻る</a></div>
-                            <div><a href="#id_page3" class="go_forward_btn">次へ</a></div>
-                        </div>              
-                
-                </div>
-                </section>
-                
-                <section class="qa_block" id="page3">
-                    <a id="id_page3">
-                        <div class="mv_area">
-                            <p class="pg_sv"></p>
-                            <span>QUESTION</span>
-                            <span>04</span>
-                        </div>
-                    </a>
-                        
-                    <div class="qa_grid">
-                        <div class="q_block">
-                            <h2>欲しい要素を教えてください</h2>
-                        </div>
-                        <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
-                            <div class="a_grid type">
-                                <div>
-                                <input type="radio" name="want" value="喜び" id="want_ch6">
-                                <label for="want_ch6" class="answer_rect">喜び</label>
-                                </div>  
-                                <div>
-                                <input type="radio" name="want" value="悲しみ" id="want_ch5">
-                                <label for="want_ch5" class="answer_rect">悲しみ</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="want" value="怒り" id="want_ch4">
-                                <label for="want_ch4" class="answer_rect">怒り</label>
-                                </div>
-                            </div>
-                            <div class="a_grid type">
-                                <div>
-                                <input type="radio" name="want" value="驚き" id="want_ch3">
-                                <label for="want_ch3" class="answer_rect">驚き</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="want" value="恐れ" id="want_ch2">
-                                <label for="want_ch2" class="answer_rect">恐れ</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="want" value="嫌悪" id="want_ch1">
-                                <label for="want_ch1" class="answer_rect">嫌悪</label>
-                                </div>
-                            </div>
-                        <!-- </form> -->
+                            <!-- </form> -->
 
                             <div class="pg_thumb"></div>
                             <div class="go_btn_wrapper">
-                                <div><a href="#id_page2" class="go_back_btn">戻る</a></div>
-                                <div><a href="#id_page4" class="go_forward_btn">次へ</a></div>
+                                <div style="width:0px; height:100px; border-width:0;"></div>                        
+                                <div class="transition_forward_button"><a href="#id_page1" class="go_forward_btn">次へ</a></div>
                             </div>
-                
-                    </div>
-                </section>
-                
-                <section class="qa_block" id="page4">
-                    <a id="id_page4">
-                        <div class="mv_area">
-                            <p class="pg_sv"></p>
-                            <span>QUESTION</span>
-                            <span>05</span>
                         </div>
-                    </a>
-                
-                    <div class="qa_grid">
-                        <div class="q_block">
-                            <h2>いらない要素を教えてください</h2>
-                        </div>
-                        <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
-                            <div class="a_grid type">
-                                <div>
-                                <input type="radio" name="excepting" value="喜び" id="excepting_ch6">
-                                <label for="excepting_ch6" class="answer_rect">喜び</label>
-                                </div>  
-                                <div>
-                                <input type="radio" name="excepting" value="悲しみ" id="excepting_ch5">
-                                <label for="excepting_ch5" class="answer_rect">悲しみ</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="excepting" value="怒り" id="excepting_ch4">
-                                <label for="excepting_ch4" class="answer_rect">怒り</label>
-                                </div>
+                    </section>
+                    
+                    <section class="qa_block" id="page1 ">
+                        <a id="id_page1">
+                            <div class="mv_area">
+                                <p class="pg_sv"></p>
+                                <span>QUESTION</span>
+                                <span>02</span>
                             </div>
-                            <div class="a_grid type">
-                                <div>
-                                <input type="radio" name="excepting" value="驚き" id="excepting_ch3">
-                                <label for="excepting_ch3" class="answer_rect">驚き</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="excepting" value="恐れ" id="excepting_ch2">
-                                <label for="excepting_ch2" class="answer_rect">恐れ</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="excepting" value="嫌悪" id="excepting_ch1">
-                                <label for="excepting_ch1" class="laanswer_rectbel">嫌悪</label>
-                                </div>
+                        </a>
+                    
+                        <div class="qa_grid">
+                            <div class="q_block">
+                                <h2>いまの気分は！</h2>
                             </div>
-                        <!-- </form> -->
-                
+                            <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
+                                <div class="a_grid type">
+                                    <div class="answer_box">
+                                    <input type="radio" name="now" value="喜び" id="answer_2_6">
+                                    <label for="answer_2_6" class="answer_rect">　嬉しい　</label>
+                                    </div>  
+                                    <div class="answer_box">
+                                    <input type="radio" name="now" value="楽しい" id="answer_2_5">
+                                    <label for="answer_2_5" class="answer_rect">　楽しい　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="now" value="怒り" id="answer_2_4">
+                                    <label for="answer_2_4" class="answer_rect">　いらいら　</label>
+                                    </div>
+                                </div>
+                                <div class="a_grid type">
+                                    <div class="answer_box">
+                                    <input type="radio" name="now" value="驚き" id="answer_2_3">
+                                    <label for="answer_2_3" class="answer_rect">　びっくり　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="now" value="不機嫌" id="answer_2_2">
+                                    <label for="answer_2_2" class="answer_rect">　不機嫌　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="now" value="寂しい" id="answer_2_1">
+                                    <label for="answer_2_1" class="answer_rect">　寂しい　</label>
+                                    </div>
+                                </div>
+                            <!-- </form> -->
                             <div class="pg_thumb"></div>
-                            <div class="go_btn_wrapper">                          
-                                <div><a href="#id_page3" class="go_back_btn">戻る</a></div>                                
-                                <!-- <form action="/result" method="POST"> -->
-                                <input type="submit" value="結果" class="go_forward_btn">
-                                </form>
-                            </div>                
+                            <div class="go_btn_wrapper">
+                                <div class="transition_back_button"><a href="#id_page0" class="go_back_btn">戻る</a></div>
+                                <div class="transition_forward_button"><a href="#id_page2" class="go_forward_btn">次へ</a></div>
+                            </div>
+                
+                        </div>
+                    </section>
+                    
+                    <section class="qa_block" id="page2">
+                        <a id="id_page2">
+                            <div class="mv_area">
+                                <p class="pg_sv"></p>
+                                <span>QUESTION</span>
+                                <span>03</span>
+                            </div>
+                        </a>    
+                            
+                        <div class="qa_grid">
+                            <div class="q_block">
+                                <h2>読後どんな気分になりたい？</h2>
+                            </div>
+                            <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
+                                <div class="a_grid type">
+                                    <div class="answer_box">
+                                    <input type="radio" name="after" value="爽快" id="after_ch6">
+                                    <label for="after_ch6" class="answer_rect">　爽快　</label>
+                                    </div>  
+                                    <div class="answer_box">
+                                    <input type="radio" name="after" value="鬱" id="after_ch5">
+                                    <label for="after_ch5" class="answer_rect">　鬱　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="after" value="唖然" id="after_ch4">
+                                    <label for="after_ch4" class="answer_rect">　唖然　</label>
+                                    </div>
+                                </div>
+                                <div class="a_grid type">
+                                    <div class="answer_box">
+                                    <input type="radio" name="after" value="落ち着く" id="after_ch3">
+                                    <label for="after_ch3" class="answer_rect">　ほっこり　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="after" value="恐怖" id="after_ch2">
+                                    <label for="after_ch2" class="answer_rect">　恐怖　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="after" value="驚愕" id="after_ch1">
+                                    <label for="after_ch1" class="answer_rect">　驚愕　</label>
+                                    </div>
+                                </div>
+                        <!-- </form> -->
+                            <div class="pg_thumb"></div>
+                            <div class="go_btn_wrapper">
+                                <div class="transition_back_button"><a href="#id_page1" class="go_back_btn">戻る</a></div>
+                                <div class="transition_forward_button"><a href="#id_page3" class="go_forward_btn">次へ</a></div>
+                            </div>              
+                    
                     </div>
-                </section>
-            </div>
+                    </section>
+                    
+                    <section class="qa_block" id="page3">
+                        <a id="id_page3">
+                            <div class="mv_area">
+                                <p class="pg_sv"></p>
+                                <span>QUESTION</span>
+                                <span>04</span>
+                            </div>
+                        </a>
+                            
+                        <div class="qa_grid">
+                            <div class="q_block">
+                                <h2>どんな本がいいですか！</h2>
+                            </div>
+                            <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
+                                <div class="a_grid type">
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="want" value="難解" id="want_ch6">
+                                    <label for="want_ch6" class="answer_rect">むずかしい本</label>
+                                    </div>  
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="want" value="簡単" id="want_ch5">
+                                    <label for="want_ch5" class="answer_rect">わかりやすい本</label>
+                                    </div>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="want" value="短い" id="want_ch4">
+                                    <label for="want_ch4" class="answer_rect">すぐ読める本</label>
+                                    </div>
+                                </div>
+                                <div class="a_grid type">
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="want" value="分厚い" id="want_ch3">
+                                    <label for="want_ch3" class="answer_rect">分厚い本</label>
+                                    </div>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="want" value="衝撃的" id="want_ch2">
+                                    <label for="want_ch2" class="answer_rect">衝撃的な本</label>
+                                    </div>
+                                    <div class="answer_box_long">
+                                    <input type="radio" name="want" value="涙" id="want_ch1">
+                                    <label for="want_ch1" class="answer_rect">泣ける本</label>
+                                    </div>
+                                </div>
+                            <!-- </form> -->
+
+                                <div class="pg_thumb"></div>
+                                <div class="go_btn_wrapper">
+                                    <div class="transition_back_button"><a href="#id_page2" class="go_back_btn">戻る</a></div>
+                                    <div class="transition_forward_button"><a href="#id_page4" class="go_forward_btn">次へ</a></div>
+                                </div>
+                    
+                        </div>
+                    </section>
+                    
+                    <section class="qa_block" id="page4">
+                        <a id="id_page4">
+                            <div class="mv_area">
+                                <p class="pg_sv"></p>
+                                <span>QUESTION</span>
+                                <span>05</span>
+                            </div>
+                        </a>
+                    
+                        <div class="qa_grid">
+                            <div class="q_block">
+                                <h2>いらない要素を教えてください！</h2>
+                            </div>
+                            <!-- <form action="/result", method="POST", enctype="multipart/gorm-data"> -->
+                                <div class="a_grid type">
+                                    <div class="answer_box">
+                                    <input type="radio" name="excepting" value="怖い" id="excepting_ch6">
+                                    <label for="excepting_ch6" class="answer_rect">　怖い　</label>
+                                    </div>  
+                                    <div class="answer_box">
+                                    <input type="radio" name="excepting" value="涙" id="excepting_ch5">
+                                    <label for="excepting_ch5" class="answer_rect">　泣ける　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="excepting" value="難しい" id="excepting_ch4">
+                                    <label for="excepting_ch4" class="answer_rect">　難しい　</label>
+                                    </div>
+                                </div>
+                                <div class="a_grid type">
+                                    <div class="answer_box">
+                                    <input type="radio" name="excepting" value="長い" id="excepting_ch3">
+                                    <label for="excepting_ch3" class="answer_rect">　長い　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="excepting" value="短い" id="excepting_ch2">
+                                    <label for="excepting_ch2" class="answer_rect">　短い　</label>
+                                    </div>
+                                    <div class="answer_box">
+                                    <input type="radio" name="excepting" value="つまらない" id="excepting_ch1">
+                                    <label for="excepting_ch1" class="answer_rect">　特にない　</label>
+                                    </div>
+                                </div>
+                            <!-- </form> -->
+                    
+                                <div class="pg_thumb"></div>
+                                <div class="go_btn_wrapper">                          
+                                    <div class="transition_back_button"><a href="#id_page3" class="go_back_btn">戻る</a></div>                                
+                                    <!-- <form action="/result" method="POST"> -->
+                                    <div class="transition_forward_button"><button type="submit" value="結果">結果</button></div>
+                                    
+                                </div>                
+                        </div>
+                    </section>  
+                </form>            
+            </div>            
         </main>
     </article>
 </body>

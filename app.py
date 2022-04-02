@@ -35,8 +35,7 @@ def result():
         after = request.form.get('after')
         want = request.form.get('want')
         excepting = request.form.get('excepting')
-        book = recommend(genre=genre, now=now, after=after,
-                         want=want, excepting=excepting)
+        book = recommend(genre=genre, now=now, after=after, want=want, excepting=excepting)
         if len(book) > 1:
             return render_template('result.html', message='"{}"か"{}"の本がおすすめです！'.format(book[0], book[1]))
         else:

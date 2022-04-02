@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="setup.js"></script> -->
     <link rel="stylesheet" href="../static/css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script rel="stylesheet"> -->
     <title>book recommend</title>
 </head>
-<body>
 
-<div class="go_forward_btn"> 
-    <form action="/question" method="POST" enctype="multipart/form-data">
-    <input type="submit" value="AIにおすすめの本を選んでもらう">
-    </form>
+<body>
+<div class="main">
+  <div class="main_container">
+    <div class="row">
+
+        <div class="intro_block logo text-center">
+          ロゴ
+        </div>
+
+        <div class="intro_block">
+            <h1 class="intro_text text-center">AIがあなたの本選びをサポートします。</h1>
+            <p class="introtext_sub text-center">本選びで困ったことはありませんか？</p>
+            <p class="intro_text">このサイトでは、あなたが選んだ項目をもとに、AIがあなたにおすすめの文庫本を紹介します。</br>稀に文庫本以外の本や希望に合わない本を紹介することもございますが、その際はぜひやり直してください。</p>
+            <form action="/question" method="POST" class="text-center">
+                <button type="submit" class="btn_white text-center">AIにおすすめの本を選んでもらう »</button>
+            </form>
+
+        </div>
+
+    </div>
+  </div>
 </div>
 
-</body>
-</html>
+
+<div class="concept">
+    <div class="main_container">
+        <div class="row">
+
+            <div class="intro_block text-center">
+                <h3 class="intro_text">AIで、読書をもっと身近に、楽しく、深く。</h3>
+            </div>
+
+            <div class="intro_block text-center">
+            <h4 class="intro_text">読書体験をより豊かに</h4>
+            <p class="intro_text_sub text-left">自分の性格にフィットした本と出会うことで、読書体験をより有意義なものに。</p>
+            </div>
+        </div>
+    </div>
+</div>

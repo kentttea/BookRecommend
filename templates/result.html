@@ -8,7 +8,38 @@
     <title>book recommend</title>
 </head>
 <body>
-<p>{{ message }}</p>
-</div>
+    <section class="result_page">
+        <div class="header-bar text-center">
+            <div class="row">
+                <div class="result_block">
+                <h1 class="result_header result_text">AIによるおすすめ</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main_container">
+            <div class="row">
+                <div class="result_block text-center">
+                    <h3 class="result_text">あなたの読みたい本は</h3>
+                    <p>このような本です。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main_container">
+            <div class="row">
+
+                <div class="result_block text-center">
+                    <h3 class="result_text">あなたにおすすめの本</h3>
+                    <p class="result_text">相関性が高い上位2冊を紹介しています。</p>
+                </div>
+                <div class="result_block text-center">
+                    <p class"result_text>{{ message }}</p>
+                </div>
+
+            </div>
+        </div>
+    </section> 
+
 </body>
 </html>

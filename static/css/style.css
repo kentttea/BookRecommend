@@ -117,7 +117,8 @@ hr {
   border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
-}
+} 
+
 
 /* 縦方向の揃え 中央揃え */
 input,
@@ -149,6 +150,7 @@ br {
   line-height: inherit;
 }
 
+
 /*--------------------------------------------------------------
     # メインコンテンツ
 --------------------------------------------------------------*/
@@ -172,7 +174,7 @@ html {
 body {
   width: 100%;
   font-weight: 500;
-  font-family: 'Corben', cursive;
+  font-family: "メイリオ", sans-serif;
   --global--color-primary: #63312D;
   color: #63312D;
 }
@@ -192,10 +194,10 @@ body {
   }
 }
 
-progress {
+/* progress {
   width: 100%;
   background: #fff;
-}
+} */
 
 header {
   position: fixed;
@@ -216,13 +218,190 @@ footer {
   position: relative;
 }
 
-progress {
+/* progress {
   position: fixed;
   z-index: 9999;
   left: 0;
   top: 0;
   background: #fff;
+} */
+
+/*--------------------------------------------------------------
+    # layout html
+--------------------------------------------------------------*/
+
+.main {
+  padding: 0 0 50px 0;
+  background-color: #e4dfde;
+  min-height: 70vh;
 }
+
+.main .logo {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.main h1 {
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 350%;
+  text-align: center;
+}
+
+.main p {
+  line-height: 2.2em;
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 150%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.main p.intro_text_sub {
+  line-height: 2.2em;
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.main_container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .main_container {
+    max-width: 720px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.intro_block {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.intro_text {
+  margin: 1rem;
+}
+
+.concept {
+  padding: 30px 0px;
+  background: linear-gradient(-135deg, #d6c19b, #3d9ec8);
+}
+
+.concept  h3 {
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 300%;
+  text-align: center;
+}
+
+.concept  h4 {
+  font-family: 'HanziPen SC';
+  font-weight: 600;
+  font-size: 200%;
+  text-align: center;
+}
+
+.concept  p {
+  font-family: 'HanziPen SC';
+  font-weight: 600;
+  font-size: 150%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px){
+  .btn_white {
+      width: 70%;
+      padding: 2.5rem;
+      margin: 0 auto;
+  }
+}
+
+.btn_white {
+  background-color: #ffffff;
+  border-radius: 80px;
+  max-width: 938px;
+  width: 30vw;
+  height: 10vh;
+  text-align: center;
+  margin: 4rem auto 4rem;
+  box-shadow: 2px 2px 2px grey;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
+
+/*--------------------------------------------------------------
+    # result html
+--------------------------------------------------------------*/
+.result_page{
+  height: 100vh;
+  width: 100%;
+}
+
+.header-bar{
+  padding: 30px 0px;
+  background: linear-gradient(-135deg, #d6c19b, #3d9ec8);
+  height: 18vh;
+}
+
+.result_page h1 {
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 350%;
+  text-align: center;
+}
+
+.result_page h3 {
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 250%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.result_page p {
+  line-height: 2.2em;
+  font-family: 'HanziPen SC';
+  font-weight: 700;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.result_block {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.result_text{
+  margin: 1rem;
+}
+
+
+/*--------------------------------------------------------------
+    # quesiton html
+--------------------------------------------------------------*/
 
 .container {
   position: relative;
@@ -250,7 +429,7 @@ section.qa_block {
 section.qa_block .mv_area {
   width: 100%;
   background: #DDD0CA;
-  padding: 5rem 0;
+  padding: 1.5rem 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -284,9 +463,9 @@ section.qa_block .mv_area span {
 }
 
 section.qa_block .mv_area span:first-of-type {
-  font-family: "ta-pop-tomo";
+  font-family: 'HanziPen SC';
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 500%;
 }
 
 @media screen and (max-width: 768px) {
@@ -296,9 +475,9 @@ section.qa_block .mv_area span:first-of-type {
 }
 
 section.qa_block .mv_area span:last-of-type {
-  font-family: "ta-pop-tomo";
+  font-family: 'HanziPen SC';
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 600%;
 }
 
 @media screen and (max-width: 768px) {
@@ -308,7 +487,7 @@ section.qa_block .mv_area span:last-of-type {
 }
 
 section.qa_block .qa_grid {
-  max-width: 90rem;
+  /* max-width: 90rem; */
   width: 100%;
   height: calc( 100% - 28.5rem);
   padding: 7rem 0 0;
@@ -344,14 +523,16 @@ section.qa_block .qa_grid .q_block {
 }
 
 section.qa_block .qa_grid .q_block h2 {
-  font-family: "ta-pop-tomo";
+  font-family: 'HanziPen SC';
   font-weight: 700;
-  font-size: 4.6rem;
+  font-size: 450%;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
   section.qa_block .qa_grid .q_block h2 {
-    font-size: 2.5rem;
+    font-size: 3.8rem;
+    text-align: center;
   }
 }
 
@@ -376,14 +557,24 @@ section.qa_block .qa_grid .a_grid {
 section.qa_block .qa_grid .pg_thumb {
   margin-top: 3rem;
   min-width: 50rem;
-  height: 3rem;
+  height: 20rem;
 }
 
 @media screen and (max-width: 768px) {
   section.qa_block .qa_grid .pg_thumb {
     min-width: 100%;
-    height: 3rem;
+    height: 20rem;
   }
+}
+
+section.qa_block .qa_grid .answer_box_long{
+  width: 30%;
+  text-align: center;
+}
+
+section.qa_block .qa_grid .answer_box{
+  width: 25%;
+  text-align: center;
 }
 
 section.qa_block .qa_grid input{
@@ -404,32 +595,42 @@ section.qa_block .qa_grid label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "ta-pop-tomo";
-  font-weight: 600;
-  font-size: 2.8rem;
+  font-family: 'HanziPen SC';
+  font-weight: 900;
+  font-size: 400%;
 }
 
 @media screen and (max-width: 768px) {
   section.qa_block .qa_grid label {
-    font-size: 1.8rem;
+    font-size: 300%;
   }
 }
 
-section.qa_block .qa_grid label.answer_circle {
-  margin: 0 5rem;
-  width: 18rem;
-  height: 18rem;
-  background: url(../images/yn_btn.png) center center no-repeat;
-  background-size: contain;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+section.qa_block .qa_grid label.answer_rect_long {
+  margin: 1rem auto;
+  padding: 1.5rem 0;
+  height: 11rem;
+  font-family: 'HanziPen SC';
+  /* font-size: 1.8rem; */
+  font-weight: 900;
+  border-bottom: solid #3d9ec8 2px;
+}
+
+@media screen and (max-width: 768px) {
+  section.qa_block .qa_grid label.answer_rect_long {
+    padding: 0 1rem;
+    height: 6rem;
+  }
 }
 
 section.qa_block .qa_grid label.answer_rect {
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 9rem;
-  border-bottom: solid #63312D 2px;
+  margin: 1rem auto;
+  padding: 1.5rem 0;
+  height: 7rem;
+  font-family: 'HanziPen SC';
+  /* font-size: 1.8rem; */
+  font-weight: 900;
+  border-bottom: solid #3d9ec8 2px;
 }
 
 @media screen and (max-width: 768px) {
@@ -439,7 +640,6 @@ section.qa_block .qa_grid label.answer_rect {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
 
 
 /*ボタンのCSS*/
@@ -448,85 +648,163 @@ section.qa_block .qa_grid label.answer_rect {
     /* width: 100%; */
     justify-content: space-between;
     padding:10px;
-}
-a.go_forward_btn{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	background:#C2DBCB;
-	color: #535252;
-  font-size: 5rem;
+    background-color: #DDD0CA;
 }
 
-a.go_back_btn{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	background:#C2DBCB;
-	color: #535252;
-  font-size: 5rem;
+@media screen and (max-width: 767px){
+  .go_btn_wrapper {
+        background-color: #DDD0CA;
+  }
 }
 
-a.go_forward_btn:not(:hover):not(:active):not(.has-background){
-	background:#C2DBCB;
-	color: #535252;
-}
-a.go_forward_btn:hover{
-	background:#C2DBCB;
-	color: #535252;
-}
-a.go_back_btn:not(:hover):not(:active):not(.has-background){
-	background:#C2DBCB;
-	color: #535252;
-}
-
-a.go_forward_btn:disabled:not(:hover):not(:active)  {
-  background: #E2E2E2;
-	color:#ffffff;
-	border-width:0;
-}
-
-a.go_forward_btn:disabled:hover  {
-  background: #E2E2E2;
-	color:#ffffff;
-	border-width:0;
+.transition_forward_button a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 1em;
+  padding: 1em 1em;
+  width: 100px;
+  height: 100px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.3s;
+  font-family: 'HanziPen SC';
+  font-size: 200%;
 }
 
-.logo_book_consult{
-	width:calc(100% -10rem);
-	margin:1rem 5rem;
+.transition_forward_button a::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #3d9ec8;
+  border-radius: 50%;
+  transition: 0.2s;
 }
 
-@media screen and (max-width:767px){
-	.go_btn_wrapper{
-		background-color: #DDD0CA;
-	}
-	a.go_forward_btn{
-		background:#ffffff;
-	}
+.transition_forward_button a::after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-top: 2px solid #333333;
+  border-right: 2px solid #333333;
+  transform: rotate(45deg);
+}
 
-	a.go_back_btn{
-		background:#ffffff;
-	}
-	a.go_forward_btn:not(:hover):not(:active):not(.has-background){
-		background:#ffffff;
-	}
-	a.go_forward_btn:hover{
-		background:#ffffff;
-	}
-	a.go_back_btn:not(:hover):not(:active):not(.has-background){
-		background:#ffffff;
-	}
-	a.go_forward_btn:disabled:not(:hover):not(:active)  {
-	  background: #E2E2E2;
-		color:#ffffff;
-		border-width:0;
-	}
+.transition_forward_button a:hover::before {
+  top: 0;
+  left: 0;
+}
 
-	a.go_forward_btn:disabled:hover  {
-	  background: #E2E2E2;
-		color:#ffffff;
-		border-width:0;
-	}
-	
+.transition_forward_button a:hover {
+  text-decoration: none;
+  background-color: #a0c4d3;
+}
+
+
+.transition_back_button a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 1em;
+  padding: 1em 1em;
+  width: 100px;
+  height: 100px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%;
+  transition: 0.3s;
+  font-family: 'HanziPen SC';
+  font-size: 200%;
+}
+
+.transition_back_button a::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #3d9ec8;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.transition_back_button a::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-bottom: 2px solid #333333;
+  border-left: 2px solid #333333;
+  transform: rotate(45deg);
+}
+
+.transition_back_button a:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.transition_back_button a:hover {
+  text-decoration: none;
+  background-color: #a0c4d3;
+}
+
+
+.transition_forward_button button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 1em;
+  padding: 1em 1em;
+  width: 100px;
+  height: 100px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.3s;
+  font-family: 'HanziPen SC';
+  font-size: 200%;
+}
+
+.transition_forward_button button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #3d9ec8;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.transition_forward_button button::after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-top: 2px solid #333333;
+  border-right: 2px solid #333333;
+  transform: rotate(45deg);
+}
+
+.transition_forward_button button:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.transition_forward_button button:hover {
+  text-decoration: none;
+  background-color: #a0c4d3;
 }
